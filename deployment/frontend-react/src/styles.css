@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #152033;
+  --muted: #617089;
+  --line: #d9e2ef;
+  --primary: #1f6feb;
+  --danger: #c62828;
+  --ok: #1b7f4a;
+  --warn: #b26a00;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #e8f0ff, var(--bg) 45%);
+  color: var(--text);
+}
+a { color: var(--primary); text-decoration: none; }
+a.active { font-weight: 700; }
+
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+  padding: 0.9rem 1.4rem; background: #0f1c2e; color: #fff;
+}
+.brand { display: flex; flex-direction: column; gap: 0.15rem; }
+.brand a { color: #fff; font-size: 1.15rem; font-weight: 700; }
+.nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.nav a { color: #c9d7ea; }
+.nav a.active, .nav a:hover { color: #fff; }
+.userbox { display: flex; gap: 0.8rem; align-items: center; }
+.content { flex: 1; padding: 1.4rem; max-width: 1100px; width: 100%; margin: 0 auto; }
+.footer {
+  padding: 0.8rem 1.4rem; color: var(--muted); border-top: 1px solid var(--line);
+  background: #fff; font-size: 0.9rem;
+}
+
+.page h2 { margin: 0 0 0.4rem; }
+.page-head { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.muted { color: var(--muted); font-size: 0.92rem; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 1rem; box-shadow: 0 8px 24px rgba(21, 32, 51, 0.04);
+}
+.grid { display: grid; gap: 1rem; }
+.stats-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 1rem 0; }
+.detail-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 1rem 0; }
+.stat-value { font-size: 1.5rem; font-weight: 700; margin-top: 0.35rem; }
+
+.btn {
+  border: 1px solid transparent; border-radius: 10px; padding: 0.55rem 0.9rem;
+  cursor: pointer; font-weight: 600;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-ghost { background: transparent; color: #fff; border-color: #3a4d68; }
+.btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+label { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.85rem; font-weight: 600; }
+input, select, textarea {
+  border: 1px solid var(--line); border-radius: 10px; padding: 0.6rem 0.75rem;
+  font: inherit; background: #fff;
+}
+.form-card, .login-card { max-width: 560px; }
+.login-page {
+  min-height: 100vh; display: grid; place-items: center; padding: 1rem;
+}
+.demo-box { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); }
+.demo-box ul { padding-left: 1rem; margin: 0.4rem 0 0; }
+.linkish {
+  background: none; border: none; color: var(--primary); cursor: pointer; padding: 0; font: inherit;
+}
+
+.alert { border-radius: 10px; padding: 0.75rem 0.9rem; margin: 0.8rem 0; }
+.alert-error { background: #fdecea; color: var(--danger); }
+.alert-info { background: #eef5ff; color: #1a4b8c; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 0.7rem 0.45rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-size: 0.85rem; }
+
+.badge {
+  display: inline-block; border-radius: 999px; padding: 0.15rem 0.55rem;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+}
+.badge-high { background: #fdecea; color: var(--danger); }
+.badge-medium { background: #fff4e5; color: var(--warn); }
+.badge-low { background: #e8f7ee; color: var(--ok); }
+
+.preview {
+  width: 100%; height: 220px; object-fit: cover; border-radius: 10px;
+  background: #eef2f7; margin-bottom: 0.6rem;
+}
+.meta-pre {
+  background: #0f1c2e; color: #dce7f7; padding: 0.75rem; border-radius: 10px;
+  overflow: auto; font-size: 0.8rem;
+}
+.risk-box { text-align: right; }
+.info-card ol { margin-top: 0.4rem; }
+.info-card .btn { margin-top: 0.6rem; display: inline-block; }

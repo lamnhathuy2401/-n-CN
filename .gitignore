@@ -1,0 +1,63 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+.mypy_cache/
+
+# --- Node / frontend build ---
+node_modules/
+dist/
+.vite/
+*.local
+
+# --- Secrets & local config ---
+.env
+.env.local
+kaggle.json
+*.pem
+
+# --- Model & data (tải riêng, không đưa lên Git) ---
+*.pth
+*.pt
+*.onnx
+deployment/data/*
+!deployment/data/.gitignore
+deployment/backend/storage/
+uploads/
+
+# --- Notebook / thí nghiệm local (không đưa lên Git) ---
+*.ipynb
+.ipynb_checkpoints/
+
+# --- Báo cáo / tài liệu nộp (không phải source code) ---
+*.pdf
+*.docx
+baocao.txt
+_cells_preview.txt
+introduction.txt
+report_assets/
+_pdf_review/
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- LaTeX build (giữ report.tex, bỏ file sinh ra) ---
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz

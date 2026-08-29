@@ -1,0 +1,1 @@
+"""EduVerify backend application package."""
